@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Inventario</title>
+
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+
+    <div class="contenedor">
+
+        <h1>Inventario</h1>
+
+        <button onclick="volverMenu()">
+            ← Volver al menú
+        </button>
+
+
+        <!-- AGREGAR PRODUCTO -->
+
+        <div class="formulario-producto">
+
+            <h2>Agregar producto</h2>
+
+            <input
+                type="text"
+                id="nombreProducto"
+                placeholder="Nombre del producto"
+            >
+
+            <input
+                type="text"
+                id="marcaProducto"
+                placeholder="Marca"
+            >
+
+            <input
+                type="number"
+                id="precioProducto"
+                placeholder="Precio"
+                step="0.01"
+            >
+
+            <input
+                type="number"
+                id="stockProducto"
+                placeholder="Stock inicial"
+            >
+
+            <button onclick="agregarNuevoProducto()">
+                Agregar producto
+            </button>
+
+            <p id="mensajeProducto"></p>
+
+        </div>
+
+
+        <!-- LISTA DEL INVENTARIO -->
+
+        <h2>Productos del inventario</h2>
+
+        <div class="cabecera-inventario">
+
+            <div>PRODUCTO</div>
+
+            <div>MARCA</div>
+
+            <div>PRECIO</div>
+
+            <div>STOCK</div>
+
+            <div>ACCIONES</div>
+
+        </div>
+
+        <div id="listaInventario"></div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
+
+

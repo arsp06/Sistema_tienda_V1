@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Ventas</title>
+
+    <link rel="stylesheet" href="estilos.css">
+
+</head>
+
+<body>
+
+    <div class="contenedor">
+
+        <h1>Historial de ventas</h1>
+
+
+        <button onclick="volverMenu()">
+            ← Volver al menú
+        </button>
+
+
+        <!-- CABECERA -->
+
+        <div class="cabecera-ventas">
+
+            <div>FECHA</div>
+
+            <div>TOTAL</div>
+
+            <div>MÉTODO DE PAGO</div>
+
+            <div>ACCIÓN</div>
+
+        </div>
+
+
+       <!-- FILTRO DE FECHAS -->
+
+<div class="filtro-fechas">
+
+    <label>
+        Desde:
+        <input type="date" id="fechaDesde">
+    </label>
+
+    <label>
+        Hasta:
+        <input type="date" id="fechaHasta">
+    </label>
+
+    <button onclick="filtrarVentas()">
+        🔎 Filtrar
+    </button>
+
+    <button onclick="mostrarVentas()">
+        🔄 Mostrar todas
+    </button>
+
+</div>
+
+
+<!-- LISTA DE VENTAS -->
+
+<div id="listaVentas"></div>
+
+
+        <!-- ==============================
+             COMPROBANTE DE VENTA
+             ============================== -->
+
+        <div
+            id="comprobanteVenta"
+            class="comprobante-venta"
+        >
+
+            <!-- ENCABEZADO -->
+
+            <div class="encabezado-ticket">
+
+                <h2>
+                    MI TIENDA
+                </h2>
+
+                <p>
+                    Productos y más
+                </p>
+
+                <p>
+                    Av. Ejemplo 123 - Lima
+                </p>
+
+                <p>
+                    Tel: 999 999 999
+                </p>
+
+            </div>
+
+
+            <!-- DETALLE -->
+
+            <div id="detalleComprobante"></div>
+
+
+            <!-- PIE -->
+
+            <div class="pie-ticket">
+
+                <p>
+                    ¡Gracias por su compra!
+                </p>
+
+                <p>
+                    Vuelva pronto
+                </p>
+
+            </div>
+
+
+            <!-- BOTONES -->
+
+            <div class="botones-comprobante">
+
+                <button onclick="imprimirComprobante()">
+                    🖨️ Imprimir venta
+                </button>
+
+                <button onclick="cerrarComprobante()">
+                    Cerrar
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

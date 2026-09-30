@@ -1,0 +1,1343 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    color: #222;
+}
+
+
+/* ==============================
+   LOGIN
+   ============================== */
+
+.login {
+    width: 350px;
+    margin: 100px auto;
+    padding: 30px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #ccc;
+    text-align: center;
+}
+
+.login h1 {
+    margin-bottom: 25px;
+}
+
+.login input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.login button {
+    width: 100%;
+    padding: 12px;
+    background-color: #222;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.login button:hover {
+    background-color: #444;
+}
+
+#mensaje {
+    color: red;
+    margin-top: 15px;
+}
+
+
+/* ==============================
+   CONTENEDOR GENERAL
+   ============================== */
+
+.contenedor {
+    width: 90%;
+    max-width: 1100px;
+    margin: 40px auto;
+}
+
+.contenedor h1 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+
+/* ==============================
+   MENÚ PRINCIPAL
+   ============================== */
+
+.menu {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    max-width: 600px;
+    margin: 40px auto;
+}
+
+.menu button {
+    padding: 25px;
+    font-size: 18px;
+    border: none;
+    border-radius: 8px;
+    background-color: #222;
+    color: white;
+    cursor: pointer;
+}
+
+.menu button:hover {
+    background-color: #444;
+}
+
+
+/* ==============================
+   BUSCAR PRODUCTO
+   ============================== */
+
+#buscarProducto {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+
+/* ==============================
+   FILTRO POR MARCA
+   ============================== */
+
+#filtroMarca {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: white;
+}
+
+
+/* ==============================
+   PRODUCTOS EN NUEVA VENTA
+   ============================== */
+
+/* Cabecera */
+
+.cabecera-productos {
+    display: grid;
+    grid-template-columns: 2fr 1.5fr 1fr 1fr 1fr;
+    align-items: center;
+    gap: 15px;
+
+    background-color: #222;
+    color: white;
+
+    padding: 15px 20px;
+
+    font-weight: bold;
+
+    border-radius: 8px 8px 0 0;
+}
+
+.cabecera-productos div:nth-child(3) {
+    text-align: center;
+}
+
+.cabecera-productos div:nth-child(4) {
+    text-align: center;
+}
+
+.cabecera-productos div:nth-child(5) {
+    text-align: center;
+}
+
+
+/* Lista */
+
+#listaProductosVenta {
+    display: block;
+    margin-bottom: 30px;
+}
+
+
+/* Cada producto */
+
+.producto-linea {
+    display: grid;
+    grid-template-columns: 2fr 1.5fr 1fr 1fr 1fr;
+    align-items: center;
+    gap: 15px;
+
+    background-color: white;
+
+    padding: 15px 20px;
+
+    border-bottom: 1px solid #ddd;
+}
+
+
+/* Nombre */
+
+.producto-nombre {
+    font-size: 16px;
+}
+
+
+/* Marca */
+
+.producto-marca {
+    color: #555;
+}
+
+
+/* Precio */
+
+.producto-precio {
+    font-weight: bold;
+    text-align: center;
+}
+
+
+/* Stock */
+
+.producto-stock {
+    text-align: center;
+}
+
+
+/* Acción */
+
+.producto-accion {
+    text-align: center;
+}
+
+.producto-accion button {
+    padding: 9px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #222;
+    color: white;
+    cursor: pointer;
+}
+
+.producto-accion button:hover {
+    background-color: #444;
+}
+
+
+/* ==============================
+   CARRITO
+   ============================== */
+
+.carrito {
+    background-color: white;
+    padding: 25px;
+    margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 5px #ccc;
+}
+
+.carrito h2 {
+    margin-top: 0;
+}
+
+.item-carrito {
+    padding: 15px 0;
+}
+
+.item-carrito h3 {
+    margin-bottom: 8px;
+}
+
+.item-carrito p {
+    margin: 7px 0;
+}
+
+
+/* ==============================
+   CANTIDAD
+   ============================== */
+
+.cantidad {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin: 10px 0;
+}
+
+.cantidad button {
+    width: 35px;
+    height: 35px;
+    border: none;
+    border-radius: 5px;
+    background-color: #222;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.cantidad button:hover {
+    background-color: #444;
+}
+
+.cantidad span {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+
+/* ==============================
+   BOTÓN ELIMINAR
+   ============================== */
+
+.item-carrito > button {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #b00020;
+    color: white;
+    cursor: pointer;
+}
+
+.item-carrito > button:hover {
+    background-color: #8b0018;
+}
+
+
+/* ==============================
+   TOTAL
+   ============================== */
+
+#total {
+    text-align: right;
+    font-size: 22px;
+    margin-top: 25px;
+}
+
+
+/* ==============================
+   MÉTODO DE PAGO
+   ============================== */
+
+.pago {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #ddd;
+}
+
+.pago label {
+    display: block;
+    margin: 12px 0;
+}
+
+.pago button {
+    margin-top: 15px;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #222;
+    color: white;
+    cursor: pointer;
+}
+
+.pago button:hover {
+    background-color: #444;
+}
+
+#mensajeVenta {
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+
+/* ==============================
+   INVENTARIO
+   ============================== */
+
+/* Lista del inventario */
+
+#listaInventario {
+    display: block;
+    margin-bottom: 30px;
+}
+
+
+/* ==============================
+   HISTORIAL DE VENTAS
+   ============================== */
+
+#listaVentas {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.venta-historial {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 5px #ccc;
+}
+
+.venta-historial h3 {
+    margin-top: 0;
+}
+
+.venta-historial p {
+    line-height: 1.5;
+}
+
+
+/* ==============================
+   FORMULARIO DE PRODUCTO
+   ============================== */
+
+.formulario-producto {
+    background-color: white;
+    padding: 25px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 5px #ccc;
+}
+
+.formulario-producto h2 {
+    margin-top: 0;
+}
+
+.formulario-producto input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.formulario-producto button {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #222;
+    color: white;
+    cursor: pointer;
+}
+
+.formulario-producto button:hover {
+    background-color: #444;
+}
+
+#mensajeProducto {
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+
+/* ==============================
+   RESPONSIVE
+   ============================== */
+
+@media (max-width: 700px) {
+
+    .menu {
+        grid-template-columns: 1fr;
+    }
+
+    .contenedor {
+        width: 95%;
+    }
+
+    /*
+       En celular hacemos que cada
+       producto tenga una sola columna
+    */
+
+    .cabecera-productos {
+        display: none;
+    }
+
+    .producto-linea {
+        grid-template-columns: 1fr;
+        gap: 8px;
+        padding: 15px;
+    }
+
+    .producto-precio,
+    .producto-stock,
+    .producto-accion {
+        text-align: left;
+    }
+
+}
+
+
+/* ==============================
+   INVENTARIO EN LÍNEAS
+   ============================== */
+
+.cabecera-inventario {
+    display: grid;
+    grid-template-columns: 2fr 1.5fr 1fr 1fr 2.5fr;
+    align-items: center;
+    gap: 15px;
+
+    background-color: #222;
+    color: white;
+
+    padding: 15px 20px;
+
+    font-weight: bold;
+
+    border-radius: 8px 8px 0 0;
+}
+
+.cabecera-inventario div:nth-child(3),
+.cabecera-inventario div:nth-child(4),
+.cabecera-inventario div:nth-child(5) {
+    text-align: center;
+}
+
+
+.producto-inventario-linea {
+    display: grid;
+
+    grid-template-columns: 2fr 1.5fr 1fr 1fr 2.5fr;
+
+    align-items: center;
+
+    gap: 15px;
+
+    background-color: white;
+
+    padding: 15px 20px;
+
+    border-bottom: 1px solid #ddd;
+}
+
+
+.inventario-nombre {
+    font-size: 16px;
+}
+
+
+.inventario-marca {
+    color: #555;
+}
+
+
+.inventario-precio {
+    font-weight: bold;
+    text-align: center;
+}
+
+
+.inventario-stock {
+    text-align: center;
+    font-weight: bold;
+}
+
+
+.inventario-acciones {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 5px;
+
+    flex-wrap: wrap;
+}
+
+
+.inventario-acciones button {
+    padding: 8px 10px;
+
+    border: none;
+
+    border-radius: 5px;
+
+    background-color: #222;
+
+    color: white;
+
+    cursor: pointer;
+}
+
+
+.inventario-acciones button:hover {
+    background-color: #444;
+}
+
+
+/* ==============================
+   INVENTARIO EN CELULAR
+   ============================== */
+
+@media (max-width: 700px) {
+
+    .cabecera-inventario {
+        display: none;
+    }
+
+    .producto-inventario-linea {
+        display: block;
+        background-color: white;
+        padding: 18px;
+        margin-bottom: 15px;
+        border-radius: 10px;
+        box-shadow: 0 2px 6px #ccc;
+    }
+
+    .inventario-nombre {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    .inventario-marca {
+        margin-bottom: 8px;
+    }
+
+    .inventario-precio {
+        text-align: left;
+        font-weight: bold;
+        margin-bottom: 8px;
+    }
+
+    .inventario-stock {
+        text-align: left;
+        font-weight: bold;
+        margin-bottom: 15px;
+    }
+
+    .inventario-acciones {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
+    }
+
+    .inventario-acciones button {
+        width: 100%;
+        padding: 11px 8px;
+        font-size: 14px;
+    }
+
+}
+
+/* ==============================
+   HISTORIAL DE VENTAS EN LÍNEAS
+   ============================== */
+
+.cabecera-ventas {
+    display: grid;
+
+    grid-template-columns: 2fr 1fr 1.5fr 1fr;
+
+    align-items: center;
+
+    gap: 15px;
+
+    background-color: #222;
+    color: white;
+
+    padding: 15px 20px;
+
+    font-weight: bold;
+
+    border-radius: 8px 8px 0 0;
+}
+
+
+/* Centrar algunas columnas */
+
+.cabecera-ventas div:nth-child(2),
+.cabecera-ventas div:nth-child(3),
+.cabecera-ventas div:nth-child(4) {
+    text-align: center;
+}
+
+
+/* Lista */
+
+#listaVentas {
+    display: block;
+}
+
+
+/* Cada venta */
+
+.venta-linea {
+    display: grid;
+
+    grid-template-columns: 2fr 1fr 1.5fr 1fr;
+
+    align-items: center;
+
+    gap: 15px;
+
+    background-color: white;
+
+    padding: 15px 20px;
+
+    border-bottom: 1px solid #ddd;
+}
+
+
+/* Fecha */
+
+.venta-fecha {
+    font-size: 15px;
+}
+
+
+/* Total */
+
+.venta-total {
+    text-align: center;
+    font-weight: bold;
+}
+
+
+/* Método de pago */
+
+.venta-metodo {
+    text-align: center;
+}
+
+
+/* Acción */
+
+.venta-accion {
+    text-align: center;
+}
+
+.venta-accion button {
+    padding: 8px 12px;
+
+    border: none;
+
+    border-radius: 5px;
+
+    background-color: #222;
+
+    color: white;
+
+    cursor: pointer;
+}
+
+.venta-accion button:hover {
+    background-color: #444;
+}
+
+
+/* ==============================
+   VENTAS EN CELULAR
+   ============================== */
+
+@media (max-width: 700px) {
+
+    .cabecera-ventas {
+        display: none;
+    }
+
+    .venta-linea {
+        grid-template-columns: 1fr;
+
+        gap: 8px;
+
+        padding: 15px;
+    }
+
+    .venta-total,
+    .venta-metodo,
+    .venta-accion {
+        text-align: left;
+    }
+
+}
+
+/* ==============================
+   REPORTES EN LÍNEAS
+   ============================== */
+
+.cabecera-reportes {
+    display: grid;
+
+    grid-template-columns: 2fr 1fr;
+
+    align-items: center;
+
+    gap: 15px;
+
+    background-color: #222;
+    color: white;
+
+    padding: 15px 20px;
+
+    font-weight: bold;
+
+    border-radius: 8px 8px 0 0;
+}
+
+.cabecera-reportes div:nth-child(2) {
+    text-align: center;
+}
+
+
+/* Lista de reportes */
+
+#resumenReportes {
+    display: block;
+}
+
+
+/* Cada línea */
+
+.reporte-linea {
+    display: grid;
+
+    grid-template-columns: 2fr 1fr;
+
+    align-items: center;
+
+    gap: 15px;
+
+    background-color: white;
+
+    padding: 15px 20px;
+
+    border-bottom: 1px solid #ddd;
+}
+
+
+/* Valor */
+
+.reporte-linea div:nth-child(2) {
+    text-align: center;
+    font-weight: bold;
+}
+
+
+/* ==============================
+   REPORTES EN CELULAR
+   ============================== */
+
+@media (max-width: 700px) {
+
+    .cabecera-reportes {
+        display: none;
+    }
+
+    .reporte-linea {
+        grid-template-columns: 1fr;
+        gap: 8px;
+        padding: 15px;
+    }
+
+    .reporte-linea div:nth-child(2) {
+        text-align: left;
+    }
+
+}
+
+/* ==============================
+   COMPROBANTE DE VENTA
+   ============================== */
+
+.comprobante-venta {
+    display: none;
+
+    background-color: white;
+
+    margin-top: 30px;
+
+    padding: 25px;
+
+    border-radius: 8px;
+
+    box-shadow: 0 0 5px #ccc;
+}
+
+
+.comprobante-venta h2 {
+    margin-top: 0;
+}
+
+
+/* PRODUCTOS DEL COMPROBANTE */
+
+.producto-comprobante {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 10px 0;
+
+    border-bottom: 1px solid #ddd;
+}
+
+
+.comprobante-venta h3 {
+    margin-top: 25px;
+}
+
+
+.comprobante-venta h2:last-child {
+    text-align: right;
+
+    margin-top: 25px;
+}
+
+
+/* BOTONES */
+
+.botones-comprobante {
+    display: flex;
+
+    gap: 10px;
+
+    flex-wrap: wrap;
+
+    margin-top: 25px;
+}
+
+
+.botones-comprobante button {
+    padding: 10px 15px;
+
+    border: none;
+
+    border-radius: 5px;
+
+    background-color: #222;
+
+    color: white;
+
+    cursor: pointer;
+}
+
+
+.botones-comprobante button:hover {
+    background-color: #444;
+}
+
+
+/* BOTÓN CERRAR */
+
+.botones-comprobante button:last-child {
+    background-color: #b00020;
+}
+
+
+.botones-comprobante button:last-child:hover {
+    background-color: #8b0018;
+}
+
+
+/* ==============================
+   COMPROBANTE EN CELULAR
+   ============================== */
+
+@media (max-width: 700px) {
+
+    .producto-comprobante {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 5px;
+    }
+
+
+    .botones-comprobante {
+        flex-direction: column;
+    }
+
+
+    .botones-comprobante button {
+        width: 100%;
+    }
+
+}
+/* ==============================
+   COMPROBANTE / TICKET DE VENTA
+   ============================== */
+
+.comprobante-venta {
+
+    display: none;
+
+    width: 400px;
+
+    max-width: 95%;
+
+    margin: 30px auto;
+
+    padding: 25px;
+
+    background-color: white;
+
+    border-radius: 8px;
+
+    box-shadow: 0 0 8px #ccc;
+
+    font-family: Arial, sans-serif;
+}
+
+
+/* ENCABEZADO */
+
+.encabezado-ticket {
+
+    text-align: center;
+
+    border-bottom: 2px dashed #333;
+
+    padding-bottom: 15px;
+
+    margin-bottom: 15px;
+}
+
+.encabezado-ticket h2 {
+
+    margin: 0;
+
+    font-size: 28px;
+
+    letter-spacing: 1px;
+}
+
+.encabezado-ticket p {
+
+    margin: 5px 0;
+
+    font-size: 14px;
+}
+
+
+/* DATOS */
+
+.datos-ticket {
+
+    font-size: 14px;
+
+    line-height: 1.5;
+}
+
+.datos-ticket p {
+
+    margin: 5px 0;
+}
+
+
+/* SEPARADORES */
+
+.separador {
+
+    border-top: 1px dashed #555;
+
+    margin: 15px 0;
+}
+
+
+/* TITULO DETALLE */
+
+.comprobante-venta h3 {
+
+    text-align: center;
+
+    font-size: 15px;
+
+    margin: 15px 0;
+}
+
+
+/* CABECERA PRODUCTOS */
+
+.cabecera-productos-ticket {
+
+    display: grid;
+
+    grid-template-columns: 1fr 60px 80px;
+
+    gap: 5px;
+
+    font-weight: bold;
+
+    font-size: 13px;
+
+    padding-bottom: 8px;
+}
+
+.cabecera-productos-ticket span:nth-child(2),
+.cabecera-productos-ticket span:nth-child(3) {
+
+    text-align: right;
+}
+
+
+/* PRODUCTOS */
+
+.producto-comprobante {
+
+    display: grid;
+
+    grid-template-columns: 1fr 60px 80px;
+
+    gap: 5px;
+
+    padding: 7px 0;
+
+    font-size: 14px;
+}
+
+.cantidad-producto,
+.precio-producto {
+
+    text-align: right;
+}
+
+
+/* TOTAL */
+
+.total-ticket {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    font-size: 20px;
+
+    padding: 10px 0;
+}
+
+.total-ticket strong {
+
+    font-size: 22px;
+}
+
+
+/* PIE */
+
+.pie-ticket {
+
+    text-align: center;
+
+    border-top: 2px dashed #333;
+
+    margin-top: 15px;
+
+    padding-top: 15px;
+}
+
+.pie-ticket p {
+
+    margin: 5px 0;
+
+    font-size: 13px;
+}
+
+
+/* BOTONES */
+
+.botones-comprobante {
+
+    display: flex;
+
+    gap: 10px;
+
+    margin-top: 25px;
+}
+
+.botones-comprobante button {
+
+    flex: 1;
+
+    padding: 12px;
+
+    border: none;
+
+    border-radius: 5px;
+
+    background-color: #222;
+
+    color: white;
+
+    cursor: pointer;
+
+    font-size: 14px;
+}
+
+.botones-comprobante button:hover {
+
+    background-color: #444;
+}
+
+.botones-comprobante button:last-child {
+
+    background-color: #b00020;
+}
+
+.botones-comprobante button:last-child:hover {
+
+    background-color: #8b0018;
+}
+
+
+/* ==============================
+   CELULAR
+   ============================== */
+
+@media (max-width: 600px) {
+
+    .comprobante-venta {
+
+        width: 95%;
+
+        padding: 18px;
+    }
+
+    .botones-comprobante {
+
+        flex-direction: column;
+    }
+
+    .botones-comprobante button {
+
+        width: 100%;
+    }
+}
+
+
+/* ==============================
+   IMPRESIÓN SOLO DEL COMPROBANTE
+   ============================== */
+
+@media print {
+
+    @page {
+        size: A4;
+        margin: 0;
+    }
+
+    html,
+    body {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        background: white;
+    }
+
+    /* Ocultar absolutamente todo */
+
+    body > * {
+        display: none !important;
+    }
+
+    /* Mostrar el contenedor principal */
+
+    body > .contenedor {
+        display: block !important;
+
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    /* Ocultar todo lo que está dentro del contenedor */
+
+    body > .contenedor > * {
+        display: none !important;
+    }
+
+    /* Mostrar SOLO el comprobante */
+
+    body > .contenedor > #comprobanteVenta {
+        display: block !important;
+
+        width: 100%;
+        min-height: 100vh;
+
+        margin: 0;
+        padding: 20mm;
+
+        background: white;
+
+        box-shadow: none;
+        border: none;
+        border-radius: 0;
+
+        position: relative;
+    }
+
+    /* Mostrar el contenido del comprobante */
+
+    body > .contenedor > #comprobanteVenta * {
+        display: block;
+    }
+
+    /* Los botones NO se imprimen */
+
+    body > .contenedor > #comprobanteVenta .botones-comprobante {
+        display: none !important;
+    }
+
+}
+/* ==============================
+   FILTRO DE FECHAS
+   ============================== */
+
+.filtro-fechas {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 20px 0;
+    padding: 15px;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+}
+
+.filtro-fechas label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: bold;
+}
+
+.filtro-fechas input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.filtro-fechas button {
+    padding: 9px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.producto-reporte {
+    display: grid;
+    grid-template-columns: 1fr 150px;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.producto-reporte div:last-child {
+    text-align: right;
+}

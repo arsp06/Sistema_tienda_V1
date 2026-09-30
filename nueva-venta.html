@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>Nueva venta</title>
+
+    <link rel="stylesheet" href="estilos.css">
+
+</head>
+
+
+<body>
+
+
+    <div class="contenedor">
+
+        <h1>Nueva venta</h1>
+
+
+        <button onclick="volverMenu()">
+            ← Volver al menú
+        </button>
+
+
+        <h2>Productos disponibles</h2>
+
+
+        <!-- BUSCAR PRODUCTO -->
+
+        <input
+            type="text"
+            id="buscarProducto"
+            placeholder="Buscar producto..."
+            oninput="filtrarProductos()"
+        >
+
+
+        <!-- FILTRAR POR MARCA -->
+
+        <select
+            id="filtroMarca"
+            onchange="filtrarProductos()"
+        >
+
+            <option value="">
+                Todas las marcas
+            </option>
+
+        </select>
+
+
+        <!-- CABECERA DE PRODUCTOS -->
+
+        <div class="cabecera-productos">
+
+            <div>PRODUCTO</div>
+
+            <div>MARCA</div>
+
+            <div>PRECIO</div>
+
+            <div>STOCK</div>
+
+            <div>ACCIÓN</div>
+
+        </div>
+
+
+        <!-- LISTA DE PRODUCTOS -->
+
+        <div id="listaProductosVenta"></div>
+
+
+        <!-- CARRITO -->
+
+        <div class="carrito">
+
+            <h2>Carrito</h2>
+
+
+            <div id="listaCarrito">
+
+                <p>
+                    No hay productos agregados.
+                </p>
+
+            </div>
+
+
+            <h3 id="total">
+
+                Total: S/ 0.00
+
+            </h3>
+
+
+            <!-- MÉTODO DE PAGO -->
+
+            <div class="pago">
+
+                <h2>
+                    Método de pago
+                </h2>
+
+
+                <label>
+
+                    <input
+                        type="radio"
+                        name="metodoPago"
+                        value="Efectivo"
+                    >
+
+                    Efectivo
+
+                </label>
+
+
+                <label>
+
+                    <input
+                        type="radio"
+                        name="metodoPago"
+                        value="Yape"
+                    >
+
+                    Yape
+
+                </label>
+
+
+                <label>
+
+                    <input
+                        type="radio"
+                        name="metodoPago"
+                        value="Tarjeta"
+                    >
+
+                    Tarjeta
+
+                </label>
+
+
+                <br><br>
+
+
+                <button onclick="registrarVenta()">
+
+                    Registrar venta
+
+                </button>
+
+
+                <p id="mensajeVenta"></p>
+
+            </div>
+
+        </div>
+
+
+        <!-- ==============================
+             COMPROBANTE DE VENTA
+             ============================== -->
+
+        <div
+            id="comprobanteVenta"
+            class="comprobante-venta"
+        >
+
+
+            <!-- ENCABEZADO DE LA TIENDA -->
+
+            <div class="encabezado-ticket">
+
+                <h2>
+                    MI TIENDA
+                </h2>
+
+                <p>
+                    Productos y más
+                </p>
+
+                <p>
+                    Av. Ejemplo 123 - Lima
+                </p>
+
+                <p>
+                    Tel: 999 999 999
+                </p>
+
+            </div>
+
+
+            <!-- DETALLE GENERADO POR JAVASCRIPT -->
+
+            <div id="detalleComprobante"></div>
+
+
+            <!-- PIE DEL TICKET -->
+
+            <div class="pie-ticket">
+
+                <p>
+                    ¡Gracias por su compra!
+                </p>
+
+                <p>
+                    Vuelva pronto
+                </p>
+
+            </div>
+
+
+            <!-- BOTONES -->
+
+            <div class="botones-comprobante">
+
+                <button onclick="imprimirComprobante()">
+
+                    🖨️ Imprimir venta
+
+                </button>
+
+
+                <button onclick="cerrarComprobante()">
+
+                    Cerrar
+
+                </button>
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+
+</body>
+
+</html>
+

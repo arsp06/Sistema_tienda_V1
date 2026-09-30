@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Reportes</title>
+
+    <link rel="stylesheet" href="estilos.css">
+
+</head>
+
+<body>
+
+    <div class="contenedor">
+
+        <h1>Reportes</h1>
+
+        <button onclick="volverMenu()">
+            ← Volver al menú
+        </button>
+
+
+        <!-- RESUMEN DE VENTAS -->
+
+        <h2>
+            Resumen de ventas
+        </h2>
+        <!-- FILTRO DE FECHAS -->
+
+<div class="filtro-fechas">
+
+    <label>
+        Desde:
+        <input type="date" id="fechaReporteDesde">
+    </label>
+
+    <label>
+        Hasta:
+        <input type="date" id="fechaReporteHasta">
+    </label>
+
+    <button onclick="filtrarReporte()">
+        🔎 Generar reporte
+    </button>
+
+    <button onclick="mostrarReportes()">
+        🔄 Mostrar hoy
+    </button>
+
+</div>
+
+
+        <div class="cabecera-reportes">
+
+            <div>CONCEPTO</div>
+
+            <div>VALOR</div>
+
+        </div>
+
+
+        <!-- INFORMACIÓN DEL REPORTE -->
+
+        <div id="resumenReportes"></div>
+       <!-- PRODUCTOS MÁS VENDIDOS -->
+
+<h2>
+     Productos más vendidos
+</h2>
+
+<div class="cabecera-reportes">
+
+    <div>PRODUCTO</div>
+
+    <div>CANTIDAD</div>
+
+</div>
+
+<div id="productosMasVendidos"></div>
+
+
+<!-- PRODUCTOS CON POCO STOCK -->
+
+<h2>
+     Productos con poco stock
+</h2>
+
+<div class="cabecera-reportes">
+
+    <div>PRODUCTO</div>
+
+    <div>STOCK</div>
+
+</div>
+
+<div id="productosPocoStock"></div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
